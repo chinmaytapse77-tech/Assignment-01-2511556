@@ -1,1 +1,48 @@
-
+[
+  {
+    "product_id": "E101",
+    "name": "Samsung 55-inch 4K Smart TV",
+    "category": "Electronics",
+    "brand": "Samsung",
+    "price": 45999,
+    "specifications": {
+      "screen_size": "55 inch",
+      "resolution": "4K UHD",
+      "warranty_years": 2,
+      "voltage": "220-240V"
+    },
+    "features": ["Smart TV", "WiFi", "HDR", "Voice Control"],
+    "stock": 25
+  },
+  {
+    "product_id": "C201",
+    "name": "Men's Casual Cotton Shirt",
+    "category": "Clothing",
+    "brand": "Levis",
+    "price": 1899,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Blue", "White", "Black"],
+    "material": "100% Cotton",
+    "care_instructions": {
+      "wash": "Machine wash",
+      "iron": "Medium heat"
+    },
+    "stock": 60
+  },
+  {
+    "product_id": "G301",
+    "name": "Organic Whole Milk",
+    "category": "Groceries",
+    "brand": "Amul",
+    "price": 72,
+    "expiry_date": "2024-12-20",
+    "nutritional_info": {
+      "calories": 150,
+      "protein_g": 8,
+      "fat_g": 8,
+      "carbs_g": 12
+    },
+    "storage": "Keep refrigerated",
+    "stock": 120
+  }
+]
