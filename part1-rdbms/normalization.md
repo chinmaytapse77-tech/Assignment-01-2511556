@@ -24,7 +24,7 @@ Product "P008" (Webcam, Electronics, ₹2100) appears in only one row — Row 13
 If this order is deleted — for example, because it was cancelled or returned — all knowledge of the Webcam product (P008) is permanently lost from the database. There is no separate product table, so the product name, category, and unit price exist only within that single order row.
 This means a legitimate business operation (cancelling an order) causes unintended data loss (losing a product record). The same risk applies to customer data: if all orders by a customer were deleted, that customer's name, email, and city would also be wiped from the system entirely.
 ---
-## Normalization Justification
+# Normalization Justification
 
 While storing all data in a single table may seem simpler initially, it introduces significant data redundancy and integrity issues. In the provided dataset, customer, product, and order details are stored together, causing repeated data across multiple rows. For example, if a customer places multiple orders, their name and city are duplicated in each row.
 
