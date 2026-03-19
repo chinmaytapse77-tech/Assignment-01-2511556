@@ -1,6 +1,6 @@
 Customers Table
 CREATE TABLE customers (
-    customer_id INT PRIMARY KEY,
+    customer_id INT PRIMARY KEY Not null,
     customer_name VARCHAR(100) NOT NULL,
     city VARCHAR(100) NOT NULL
 );
