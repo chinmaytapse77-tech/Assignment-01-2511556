@@ -2,7 +2,7 @@
 
 # ETL Decisions
 
-# Decision 1 — Standardizing inconsistent date formats
+## Decision 1 — Standardizing inconsistent date formats
 
 #Problem:** The `date` column in `retail_transactions.csv` contained three different formats across rows: `DD/MM/YYYY` (e.g. `29/08/2023`), `DD-MM-YYYY` (e.g. `12-12-2023`), and `YYYY-MM-DD` (e.g. `2023-02-05`). Mixing these formats would cause incorrect sorting and grouping in time-based queries, and would break date functions in SQL.
 
