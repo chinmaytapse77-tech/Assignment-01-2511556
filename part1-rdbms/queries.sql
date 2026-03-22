@@ -1,6 +1,13 @@
+-- ============================================================
+-- Part 1 Task 1.3 — SQL Queries
+-- Tool: MySQL Workbench 8.0
+-- Run schema_design.sql first before running these queries
+-- ============================================================
+
 USE assignment_db;
- 
-Q1: List all customers from Mumbai along with their total order value
+
+
+-- Q1: List all customers from Mumbai along with their total order value
 SELECT
     c.customer_id,
     c.customer_name,
@@ -11,9 +18,9 @@ JOIN orders o ON c.customer_id = o.customer_id
 WHERE c.customer_city = 'Mumbai'
 GROUP BY c.customer_id, c.customer_name, c.customer_city
 ORDER BY total_order_value DESC;
- 
- 
-Q2: Find the top 3 products by total quantity sold
+
+
+-- Q2: Find the top 3 products by total quantity sold
 SELECT
     p.product_id,
     p.product_name,
@@ -24,9 +31,9 @@ JOIN orders o ON p.product_id = o.product_id
 GROUP BY p.product_id, p.product_name, p.category
 ORDER BY total_quantity_sold DESC
 LIMIT 3;
- 
- 
-Q3: List all sales representatives and the number of unique customers they have handled
+
+
+-- Q3: List all sales representatives and the number of unique customers they have handled
 SELECT
     sr.sales_rep_id,
     sr.sales_rep_name,
@@ -35,9 +42,9 @@ FROM sales_reps sr
 LEFT JOIN orders o ON sr.sales_rep_id = o.sales_rep_id
 GROUP BY sr.sales_rep_id, sr.sales_rep_name
 ORDER BY unique_customers_handled DESC;
- 
- 
-Q4: Find all orders where the total value exceeds 10,000, sorted by value descending
+
+
+-- Q4: Find all orders where the total value exceeds 10,000, sorted by value descending
 SELECT
     o.order_id,
     c.customer_name,
@@ -51,9 +58,9 @@ JOIN customers c ON o.customer_id = c.customer_id
 JOIN products p  ON o.product_id  = p.product_id
 WHERE o.total_value > 10000
 ORDER BY o.total_value DESC;
- 
- 
-Q5: Identify any products that have never been ordered
+
+
+-- Q5: Identify any products that have never been ordered
 SELECT
     p.product_id,
     p.product_name,
