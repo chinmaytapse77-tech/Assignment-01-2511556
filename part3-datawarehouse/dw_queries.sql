@@ -1,9 +1,7 @@
 Part 3 Task 3.2 — Analytical Queries
 Database: dw_retail
 
- 
 USE dw_retail;
- 
  
 Q1: Total sales revenue by product category for each month
 SELECT
